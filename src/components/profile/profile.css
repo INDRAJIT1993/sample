@@ -1,0 +1,91 @@
+.Profile {
+    padding: 20px 0px 0px 100px;
+    display: flex;
+    height: 90vh;
+    /* align-items: left; */
+    /* justify-content: left; */
+    /* font-size: 3rem; */
+  }
+
+  #avatar {
+    /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
+    background-image: url('../../images/icons/Icon.svg');
+    
+    /* make a square container */
+    width: 160px;
+    height: 160px;
+
+    /* fill the container, preserving aspect ratio, and cropping to fit */
+    background-size: cover;
+    border-style: solid;
+    border-width: 6px;
+    border-color: #287AB8;
+    border-radius: 50%;
+
+    /* center the image vertically and horizontally */
+    background-position: center;
+    float: none !important;
+    margin: 5%;
+
+    /* round the edges to a circle with border radius 1/2 container size */
+}
+
+.button{
+    width: 132px;
+    height: 42px;
+    border: 1px solid #e4e8f1;
+    border-radius: 6px;
+    background-color: #096da9;
+    background-size: cover;
+    font-family: Open Sans;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
+    }
+
+    .roleText{
+    width: 189px;
+    height: 43px;
+    font-family: Open Sans;
+    font-size: 32px;
+    color: #ffffff;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
+    /* padding-left: 454px; */
+    padding-top: 104px;
+    /* padding-right: 381px; */
+    }
+
+    .metrics{
+      width: 206px;
+height: 27px;
+font-family: Open Sans;
+font-size: 20px;
+color: #495054;
+text-decoration: none solid rgb(73, 80, 84);
+font-weight: bold;
+border-bottom: 1px solid #258BD9;
+    }
+
+    .displayname{
+      width: 279px;
+height: 43px;
+font-family: Open Sans;
+font-size: 32px;
+color: #495054;
+text-decoration: none solid rgb(73, 80, 84);
+text-align: center
+    }
+    .displyarole{
+      width: 273px;
+height: 54px;
+font-family: Open Sans;
+font-size: 20px;
+color: #495054;
+text-decoration: none solid rgb(73, 80, 84)
+    }
+
+    

@@ -1,0 +1,18 @@
+.slectedavatar{
+padding-top: 50px;
+}
+
+.photo{
+width: 129px;
+height: 129px;
+}
+
+.selectAvatar{
+width: 252px;
+height: 41px;
+font-family: Open Sans;
+font-size: 30px;
+color: #e3e3e3;
+text-decoration: none solid rgb(227, 227, 227);
+margin: auto;
+}

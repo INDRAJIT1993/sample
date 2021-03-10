@@ -1,0 +1,45 @@
+.rectangle{
+/* height: 1px; */
+height: 80px;
+width: 100%;
+background: #FFFFFF;
+border: 1px solid #D8E1E8;
+border-radius: 3px;
+opacity: 1;
+margin-top: 16px;
+margin-left: 20px;
+margin-right: 20px;
+display:inline-block;
+}
+
+.inputtoken{
+width: 302px;
+height: 40px;
+padding: 0px 8px;
+border: 1px solid #8c8c8c;
+border-radius: 4px;
+background-color: #ffffff;
+background-size: cover;
+font-family: Open Sans;
+font-size: 16px;
+color: #121212;
+text-decoration: none solid rgb(18, 18, 18);
+display: inline-flex;
+margin-top: 16px;
+margin-left: 20px;
+}
+
+input {
+    float: left;
+  }
+
+.submitButton{
+width: 101px;
+height: 42px;
+background: #F8F8F8 0% 0% no-repeat padding-box;
+border: 1px solid #E3E3E3;
+border-radius: 6px;
+opacity: 1;
+margin-top: 16px;
+margin-right: 1100px;
+}  
