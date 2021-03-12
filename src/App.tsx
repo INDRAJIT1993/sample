@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router,Switch, Route } from "react-router-dom";
 import './App.css';
 import Profile from './components/profile/profile'
-import Clever from './components/clever/clever'
+import Clevers from './components/clevers/clevers'
 import Navbar from './components/Navbar/Navbar';
+import appbar from './components/appbar/appbar';
 
 
 function App() {
@@ -12,8 +13,8 @@ function App() {
       <Router>
         <Switch>
           <Route path='/' exact component={Profile} />
-          <Route path='/clever' component={() => <Clever/>}/>
-          {/* <Route path='/products' component={Products} /> */}
+          <Route path='/admin' exact component={appbar} />
+          <Route path='/clever' component={() => <Clevers/>}/>
         </Switch>
       </Router>
     </div>

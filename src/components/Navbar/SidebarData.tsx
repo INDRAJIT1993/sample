@@ -7,37 +7,37 @@ export const SidebarData = [
   {
     title: 'Dashboard',
     path: '/',
-    icon: <AiIcons.AiFillHome style={{color: 'grey'}}/>,
+    icon: <AiIcons.AiFillHome/>,
     cName: 'nav-text'
   },
   {
     title: 'TestAssignment',
     path: '/products',
-    icon: <FaIcons.FaAddressBook style={{color: 'grey'}}/>,
+    icon: <FaIcons.FaAddressBook/>,
     cName: 'nav-text'
   },
   {
     title: 'Proctoring',
     path: '/products',
-    icon: <FaIcons.FaArrowsAltV style={{color: 'grey'}}/>,
+    icon: <FaIcons.FaArrowsAltV/>,
     cName: 'nav-text'
   }, 
   {
     title: 'Reporting',
     path: '/reports',
-    icon: <IoIcons.IoIosPaper style={{color: 'grey'}}/>,
+    icon: <IoIcons.IoIosPaper/>,
     cName: 'nav-text'
   },
   {
     title: 'Administrative',
     path: '/team',
-    icon: <FaIcons.FaUserAlt style={{color: 'grey'}}/>,
+    icon: <FaIcons.FaUserAlt/>,
     cName: 'nav-text'
   },
   {
     title: 'Logout',
     path: '/support',
-    icon: <AiIcons.AiOutlineLogout style={{color: 'grey'}}/>,
+    icon: <AiIcons.AiOutlineLogout/>,
     cName: 'nav-text'
   }
 ];

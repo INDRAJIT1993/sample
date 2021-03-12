@@ -1,0 +1,72 @@
+
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  top: 76px;
+  left: 16px;
+  /* width: 992px; */
+  height: 80px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #D8E1E8;
+  border-radius: 3px;
+  opacity: 1;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  /* margin: 5px 10px 5px 0; */
+  /* padding-left: 50px; */
+  /* background-color: #fff; */
+  border: 1px solid #ddd;
+  /* top: 95px; */
+  /* left: 32px; */
+  width: 250px;
+  height: 42px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #D7DAE2;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.form-inline button {
+  padding-left: 10px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+  top: 95px;
+  left: 348px;
+  width: 80px;
+  height: 42px;
+  background: #F8F8F8 0% 0% no-repeat padding-box;
+  border: 1px solid #E3E3E3;
+  border-radius: 6px;
+  opacity: 1;
+  color: grey;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+
+@media (max-width: 600px) {
+  .form-inline input {
+    margin: 10px 0;
+    width: 200px;
+  }
+  .form-inline button {
+    margin: 10px 0;
+    width:80px
+  }
+  
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+}

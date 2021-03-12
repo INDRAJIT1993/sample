@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from './dialog/dialog';
 import AvatarModal from './avatar/avatar';
 import Grid from '@material-ui/core/Grid';
-import Navbar from '../Navbar/Navbar'
+import ButtonAppBar from '../appbar/appbar';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from "@material-ui/core/TextField";
 import './profile.css'
@@ -39,8 +39,8 @@ function Profile() {
   };
   return (
     <div>
-     <Navbar Title={`Profile`}/>
-      <div className='Profile'>
+     {/* <ButtonAppBar/> */}
+      <div className=''>
         <Grid container justify="center" spacing={1}>
           <Grid item xs={3} lg={3} style={{ paddingRight: "140px" }}>
             <div>
