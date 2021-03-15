@@ -4,7 +4,7 @@ import './App.css';
 import Profile from './components/profile/profile'
 import Clevers from './components/clevers/clevers'
 import Navbar from './components/Navbar/Navbar';
-import appbar from './components/appbar/appbar';
+import ButtonAppBar from './components/appbar/appbar';
 
 
 function App() {
@@ -13,7 +13,9 @@ function App() {
       <Router>
         <Switch>
           <Route path='/' exact component={Profile} />
-          <Route path='/admin' exact component={appbar} />
+          <Route path="/admin" component={() => (<ButtonAppBar myProp="Admin" authority="normal"/>)}/>
+          <Route path="/rootadmin" component={() => (<ButtonAppBar myProp="Admin" authority="root"/>)}/>
+          <Route path="/teacher" component={() => (<ButtonAppBar myProp="Teacher" />)}/>
           <Route path='/clever' component={() => <Clevers/>}/>
         </Switch>
       </Router>

@@ -11,38 +11,44 @@ export const SidebarDataAdmin = [
     {
         title: 'Dashboard',
         path: '/',
-        icon: <img src={Home} alt="home" />,
-        cName: 'nav-text'
+        icon: <img src={Home} alt="home" className="tooltip"/>,
+        tooltip: <span className="iconnamedashboard">Dashboard</span>,
+        cName: ''
     },
     {
         title: 'TestAssignment',
         path: '/products',
-        icon: <img src={TestAssignment} alt="home" />,
-        cName: 'nav-text'
+        icon: <img src={TestAssignment} alt="home" className="tooltip"/>,
+        tooltip: <span className="iconnameassignment">TestAssignment</span>,
+        cName: ''
     },
     {
         title: 'Proctoring',
         path: '/products',
-        icon: <img src={proctoring} alt="home" />,
-        cName: 'nav-text'
+        icon: <img src={proctoring} alt="home" className="tooltip"/>,
+        tooltip: <span className="iconnameproctering">Proctoring</span>,
+        cName: ''
     },
     {
         title: 'Reporting',
         path: '/reports',
-        icon: <img src={adminstrative} alt="home" />,
-        cName: 'nav-text'
+        icon: <img src={reporting} alt="home" className="tooltip"/>,
+        tooltip: <span className="iconnamereporting">Reporting</span>,
+        cName: ''
     },
     {
         title: 'Administrative',
         path: '/team',
-        icon: <img src={reporting} alt="home" />,
-        cName: 'nav-text'
+        icon: <img src={adminstrative} alt="home" className="tooltip"/>,
+        tooltip: <span className="iconnameadminstrative">Administrative</span>,
+        cName: ''
     },
     {
         title: 'Logout',
         path: '/support',
-        icon: <img src={logout} alt="home" />,
-        cName: 'nav-text'
+        icon: <img src={logout} alt="home" className="tooltip"/>,
+        tooltip: <span className="iconnamelogout">Logout</span>,
+        cName: ''
     }
 ];
 
@@ -50,54 +56,78 @@ export const SidebarDataTeacher = [
     {
         title: 'Dashboard',
         path: '/',
-        icon: <img src={Home} alt="home" />,
-        cName: 'nav-text'
+        icon: <img src={Home} alt="home" className="tooltip"/>,
+        tooltip: <span className="iconnamedashboard">Dashboard</span>,
+        cName: ''
     },
     {
         title: 'Proctoring',
         path: '/products',
-        icon: <img src={proctoring} alt="home" />,
-        cName: 'nav-text'
+        icon: <img src={proctoring} alt="home" className="tooltip"/>,
+        tooltip: <span className="iconnameproctering">Proctoring</span>,
+        cName: ''
     },
     {
         title: 'Reporting',
         path: '/reports',
-        icon: <img src={adminstrative} alt="home" />,
-        cName: 'nav-text'
+        icon: <img src={reporting} alt="home" className="tooltip"/>,
+        tooltip: <span className="iconnamereporting">Reporting</span>,
+        cName: ''
     },
     {
         title: 'Administrative',
         path: '/team',
-        icon: <img src={reporting} alt="home" />,
-        cName: 'nav-text'
+        icon: <img src={adminstrative} alt="home" className="tooltip"/>,
+        tooltip: <span className="iconnameadminstrative">Administrative</span>,
+        cName: ''
     },
     {
         title: 'Logout',
         path: '/support',
-        icon: <img src={logout} alt="home" />,
-        cName: 'nav-text'
+        icon: <img src={logout} alt="home" className="tooltip"/>,
+        tooltip: <span className="iconnamelogout">Logout</span>,
+        cName: ''
     }
 ];
 
 export const admistrationAdmin = [
     {
-        title: 'clever',
+        title: 'Clever',
         path: '/clever',
     },
     {
-        title: 'rostering',
+        title: 'Rostering',
         path: '/rostering',
     },
     {
-        title: 'orfer history-root admin only',
-        path: '/order-history',
-    },
-    {
-        title: 'setting and preferences',
+        title: 'Setting and Preferences',
         path: '/settings',
     },
     {
-        title: 'user search',
+        title: 'User Search',
+        path: '/user-search',
+    }
+]
+
+export const admistrationRootAdmin = [
+    {
+        title: 'Clever',
+        path: '/clever',
+    },
+    {
+        title: 'Rostering',
+        path: '/rostering',
+    },
+    {
+        title: 'Order history',
+        path: '/order-history',
+    },
+    {
+        title: 'Setting and Preferences',
+        path: '/settings',
+    },
+    {
+        title: 'User Search',
         path: '/uer-search',
     }
 ]

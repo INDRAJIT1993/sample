@@ -8,13 +8,8 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-router-dom';
 import * as AiIcons from 'react-icons/ai';
-import { SidebarDataAdmin, SidebarDataTeacher, admistrationAdmin, admistrationTeacher } from './sideData';
+import { SidebarDataAdmin, SidebarDataTeacher, admistrationRootAdmin, admistrationAdmin, admistrationTeacher } from './sideData';
 import './appbar.css';
-import { grey } from '@material-ui/core/colors';
-import { colors } from '@material-ui/core';
-
-
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,8 +24,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ButtonAppBar() {
-  const [role, setRole] = useState('Admin');
+export default function ButtonAppBar(props: any) {
+  const { myProp, authority } = props;
+  const [role, setRole] = useState(myProp);
   const classes = useStyles();
   const [sidebar, setSidebar] = useState(false);
   const [subsidebar, setSubsidebar] = useState(false);
@@ -40,12 +36,11 @@ export default function ButtonAppBar() {
   }
   const showSubidebar = () => setSubsidebar(!subsidebar);
   let SidebarData = SidebarDataAdmin;
-  let sidenavData = admistrationAdmin;
+  let sidenavData = (authority == "root") ? admistrationRootAdmin : admistrationAdmin;
   if (role == 'Teacher') {
     SidebarData = SidebarDataTeacher;
     sidenavData = admistrationTeacher;
   }
-
 
   return (
     <div className={classes.root}>
@@ -57,15 +52,16 @@ export default function ButtonAppBar() {
           <div className={sidebar ? 'sidebar' : 'nav-menu'}>
             <li>
               <Link to='#' onClick={showSidebar} className={'hover'}>
-                <AiIcons.AiOutlineClose  />
+                <AiIcons.AiOutlineClose />
               </Link>
             </li>
             {SidebarData.map((item, index) => {
-              if (item.title=="Administrative") {
+              if (item.title == "Administrative") {
                 return (
                   <li key={index} className={item.cName}>
                     <Link to="#" onClick={showSubidebar} className={'hover'}>
                       {item.icon}
+                      {/* <span className="tooltiptext">Tooltip text</span> */}
                     </Link>
                   </li>
                 )
@@ -73,7 +69,9 @@ export default function ButtonAppBar() {
                 return (
                   <li key={index} className={item.cName}>
                     <Link to="#">
-                      {item.icon}
+                      <div>
+                        {item.icon}
+                      </div>
                     </Link>
                   </li>
                 )
@@ -81,10 +79,12 @@ export default function ButtonAppBar() {
             })}
           </div>
           <div id="mySidenav" className={subsidebar ? 'sidenavopen' : 'sidenavclose'}>
+            <a href="#" className="text">Administration</a>
+            
             {sidenavData.map((item, index) => {
               return (
                 <div className={'sidenavmenu'}>
-                  <a href={item.path} style={{ color: 'grey', textDecoration:'none' }}>{item.title}</a>
+                  <a href={item.path} style={{ color: 'grey', textDecoration: 'none' }}>{item.title}</a>
                 </div>
               )
             })}

@@ -112,12 +112,22 @@
     color: #f1f1f1;
   } */
   
-  .sidenav .closebtn {
+  .sidenavopen .text {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
+    font-size: 15px;
     margin-left: 50px;
+    color: grey;
+  }
+
+  .sidenavclose .text {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 15px;
+    margin-left: 50px;
+    color: grey;
   }
   
   @media screen and (max-height: 450px) {
@@ -144,3 +154,130 @@
   .hover:hover{
     color: #096DA9;
   }
+
+  .tooltip {
+    position: relative;
+    /* display: inline-block; */
+  }
+  
+  .tooltip .tooltiptext {
+    /* visibility: hidden; */
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+
+  /* .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  } */
+
+  .iconnamedashboard {
+    padding: 35px 8px 6px 100px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+
+  .iconnameassignment {
+    padding: 0px 8px 6px 100px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+
+  .iconnameproctering{
+    padding: 0px 8px 6px 100px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+
+  .iconnamereporting {
+    padding: 0px 8px 6px 100px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .iconnameadminstrative {
+    padding: 0px 8px 6px 100px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+
+  .iconnamelogout {
+    padding: 0px 8px 6px 100px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+  
+
+
+  

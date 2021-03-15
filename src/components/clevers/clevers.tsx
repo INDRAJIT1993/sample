@@ -47,14 +47,18 @@ const Data = [
 export default function Clevers() {
   const classes = useStyles();
   const [show, setShow] = useState(false);
-  const [tableData, setTableData]=useState([]);
+  const [tableData, setTableData] = useState([]);
+
+  function handleSubmit(event:any){
+    event.preventDefault();
+   console.log("opopop",event.target.value);
+  }
 
   const getData = () => {
-    setShow(!show)
-    // const districtId=document.getElementById("district");
-    // console.log("hghghghghg")
+    setShow(true)
     axios.get(`http://afbe83ed305c74ac9b631268adab5c87-895327856.us-west-2.elb.amazonaws.com/roster/v1.0/syncDetails?district=58da8a43cc70ab00017a1a87`)
       .then(res => {
+        console.log("hghghghghg", res.data.data);
         setTableData(res.data.data)
       }).catch((err) => {
         console.log(err);
@@ -64,38 +68,35 @@ export default function Clevers() {
   return (
     <div>
       <ButtonAppBar />
-      <form className="form-inline">
+      <form className="form-inline" onSubmit={handleSubmit}>
         <input type="text" id="district" placeholder="Enter Id" name="district" />
-        <button type="button" onClick={getData}>Submit</button>
+        <input type="submit" value="submit" onClick={getData}/>
       </form>
       {
         show ?
           <div style={{ maxWidth: "100%" }}>
-            <TableContainer component={Paper}>
-              <Table className={classes.table} size="small" aria-label="a dense table">
-                <TableHead >
-                  <TableRow>
-                    <StyledTableCell>Sync Performed on date</StyledTableCell>
-                    <StyledTableCell align="right">Status</StyledTableCell>
-                    <StyledTableCell align="right">Error</StyledTableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {tableData.map((item:any) => (
-                    <StyledTableRow key={item.syncDate}>
-                      <StyledTableCell component="th" scope="item">
-                        {item.syncDate}
-                      </StyledTableCell>
-                      <StyledTableCell align="right">{item.syncStatus}</StyledTableCell>
-                      <StyledTableCell align="right">
-                        {item.syncStatus=="Error"?<FaIcons.FaExclamationTriangle className="tooltip" style={{color: '#FF0000'}}/>:''}
-                        {/* <span className="tooltiptext">Tooltip text</span> */}
-                        </StyledTableCell>
-                    </StyledTableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
+            <table>
+              <caption className="syncpagetitle">Sync performed Summary</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Sync performed on date</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Error</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tableData.map((item: any) => {
+                  return (
+                    <tr>
+                      <td scope="row" data-label="Sync performed on date">{item.syncDate}</td>
+                      <td data-label="Status" className="syncstatus">{item.syncStatus}</td>
+                      <td data-label="Error" >{item.syncStatus == "Error" ? <div className="tooltip"><FaIcons.FaExclamationTriangle /></div> : ''}</td>
+                    </tr>
+                  )
+                }
+                )}
+              </tbody>
+            </table>
           </div> : ""
       }
     </div>
